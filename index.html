@@ -1,12 +1,49 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NBUFinanc — учебный портал</title><link rel="stylesheet" href="style.css"></head><body>
-<header><button id="menu">☰</button><a class="brand" href="#" id="home"><b>N</b><span>NBU<span>Financ</span><small>АКАДЕМИЯ ФИНАНСОВОЙ ГРАМОТНОСТИ</small></span></a><input id="search" placeholder="Поиск курсов и материалов"><div class="user">У</div></header>
-<div class="layout"><aside id="sidebar"><small>МОЁ ОБУЧЕНИЕ</small><button class="nav active" data-page="dashboard">▦　Главная</button><button class="nav" data-page="catalog">▤　Каталог курсов</button><button class="nav" data-page="mycourses">◷　Мои курсы <b id="mycount">0</b></button><button class="nav" data-page="achievements">☆　Достижения</button><small class="spaced">ТЕМАТИЧЕСКИЕ РАЗДЕЛЫ</small><button class="nav" data-filter="Финансовая грамотность">◈　Финансовая грамотность</button><button class="nav" data-filter="Цифровая безопасность">⌑　Цифровая безопасность</button><div class="help"><b>Нужна помощь?</b><p>Изучайте материалы в удобном темпе.</p><button id="help">Как пользоваться порталом</button></div></aside>
-<main>
-<section id="dashboard" class="page"><div class="hero"><div><small>УЧЕБНЫЙ ПОРТАЛ NBUFINANC</small><h1>Добро пожаловать<br>в академию</h1><p>Развивайте финансовые навыки и учитесь защищать свои данные.</p><button class="primary" data-goto="catalog">Выбрать курс　→</button></div><div class="heroart"><strong>₮</strong><span>✓ Безопасное обучение</span></div></div><div class="metrics"><article><i>▤</i><span>Доступно курсов<strong id="total">6</strong></span></article><article><i class="green">✓</i><span>Завершено курсов<strong id="completed">0</strong></span></article><article><i class="orange">◷</i><span>Прогресс обучения<strong id="progress">0%</strong></span></article></div><div class="sectionhead"><div><small>ПРОДОЛЖИТЬ ОБУЧЕНИЕ</small><h2>Рекомендуемые курсы</h2></div><button class="link" data-goto="catalog">Все курсы →</button></div><div id="featured" class="cards"></div><div class="sectionhead"><div><small>ВАШ ПУТЬ</small><h2>Как проходит обучение</h2></div></div><div class="steps"><article><b>01</b><strong>Выберите курс</strong><p>Выберите интересующую тему.</p></article><article><b>02</b><strong>Изучите 10 слайдов</strong><p>Короткие материалы и советы.</p></article><article><b>03</b><strong>Пройдите тест</strong><p>Ответьте на вопросы по теме.</p></article><article><b>04</b><strong>Получите результат</strong><p>Посмотрите баллы и разбор ошибок.</p></article></div><p class="warning">ⓘ Учебный проект. Не вводите настоящие банковские реквизиты, PIN-коды, CVV/CVC, пароли или SMS-коды.</p></section>
-<section id="catalog" class="page hidden"><small>БИБЛИОТЕКА ОБУЧЕНИЯ</small><h1>Каталог курсов</h1><p class="muted">Каждый курс состоит из 10 учебных слайдов и итогового теста.</p><div class="filters"><div><button class="filter selected" data-cat="Все">Все курсы</button><button class="filter" data-cat="Финансовая грамотность">Финансовая грамотность</button><button class="filter" data-cat="Цифровая безопасность">Цифровая безопасность</button></div><span id="count">6 курсов</span></div><div id="allcourses" class="cards"></div></section>
-<section id="mycourses" class="page hidden"><small>ЛИЧНЫЙ ПРОГРЕСС</small><h1>Мои курсы</h1><p class="muted">Курсы, которые вы начали или завершили.</p><div id="mine" class="cards"></div></section>
-<section id="achievements" class="page hidden"><small>ВАШИ РЕЗУЛЬТАТЫ</small><h1>Достижения</h1><p class="muted">Учитесь последовательно и отмечайте свои успехи.</p><div id="awards" class="cards"></div></section>
-<section id="player" class="page hidden"><div class="playerhead"><button class="link" id="exit">← Назад к курсам</button><span id="category"></span></div><div class="playergrid"><div><div class="progressbox"><div><span id="slidenum">Слайд 1 из 10</span><span id="slidepct">10%</span></div><div class="track"><i id="slidebar"></i></div></div><article class="slide"><div id="visual" class="visual">₮</div><div class="slidebody"><small id="kicker">ОБУЧЕНИЕ</small><h1 id="slidetitle"></h1><p id="slidetext"></p><div id="tip" class="tip"></div></div></article><div class="controls"><button class="secondary" id="prev">← Предыдущий</button><span id="position">1 / 10</span><button class="primary" id="next">Следующий слайд →</button></div></div><aside class="outline"><h3>Содержание курса</h3><p id="coursename"></p><div id="slidelist"></div><p class="hint" id="hint">Изучите все слайды, чтобы открыть итоговый тест.</p></aside></div></section>
-<section id="quiz" class="page hidden"><button class="link" id="backslides">← Вернуться к слайдам</button><small>ИТОГОВОЕ ОЦЕНИВАНИЕ</small><h1 id="quiztitle">Проверка знаний</h1><p class="muted">Выберите один правильный ответ в каждом вопросе.</p><div class="quizgrid"><div><div class="progressbox"><span id="qcount">Вопрос 1 из 5</span><div class="track"><i id="qbar"></i></div></div><article class="question"><small id="qnum">ВОПРОС 01</small><h2 id="qtext"></h2><div id="options"></div><div id="feedback" class="feedback hidden"></div><div class="controls"><button class="secondary" id="qprev">← Назад</button><button class="primary" id="check">Проверить ответ</button><button class="primary hidden" id="qnext">Следующий вопрос →</button></div></article></div><aside class="outline"><div class="checkicon">✓</div><h3>Итоговый тест</h3><p>5 вопросов. Для успешного завершения нужно набрать не менее 70%.</p><hr><p>Количество вопросов <b>5</b></p><p>Проходной балл <b>70%</b></p></aside></div></section>
-<section id="result" class="page hidden"><article class="result"><div id="resulticon">✓</div><small>РЕЗУЛЬТАТ ОБУЧЕНИЯ</small><h1 id="resulttitle">Курс завершён</h1><p id="resultmsg"></p><strong id="score">80%</strong><span>Ваш результат</span><div class="resultbuttons"><button class="primary" id="retry">Пройти тест заново</button><button class="secondary" id="backcatalog">Вернуться в каталог</button></div><div id="review"></div></article></section>
-</main></div><div id="toast"></div><div id="modal" class="modal hidden"><article><button id="close" class="close">×</button><small>КРАТКАЯ ИНСТРУКЦИЯ</small><h2>Как учиться на NBUFinanc</h2><ol><li>Выберите курс в каталоге.</li><li>Изучите 10 слайдов.</li><li>После последнего слайда пройдите тест.</li><li>Наберите минимум 70% и посмотрите разбор ответов.</li></ol><button class="primary" id="ok">Понятно</button></article></div><script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#102d35">
+  <title>NBUFinanc — Академия финансовой грамотности</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-frame">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#home" aria-label="NBUFinanc"><span class="brand-mark">N</span><span class="brand-name">NBU<span>Financ</span><small id="brandCaption"></small></span></a>
+      <div class="sidebar-content">
+        <small class="nav-caption" id="learningCaption"></small>
+        <nav id="mainNav" aria-label="Навигация"></nav>
+        <small class="nav-caption topic-caption" id="topicCaption"></small>
+        <nav id="topicNav" aria-label="Темы"></nav>
+      </div>
+      <div class="sidebar-help"><span class="help-icon">?</span><div><b id="helpTitle"></b><p id="helpText"></p></div><button id="helpButton" class="text-button"></button></div>
+      <div class="sidebar-foot">NBUFinanc <span>·</span> Academy</div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar">
+        <button class="icon-button menu-button" id="menuButton" aria-label="Menu">☰</button>
+        <div class="mobile-brand"><span class="brand-mark">N</span><b>NBU<span>Financ</span></b></div>
+        <label class="searchbox"><span>⌕</span><input id="searchInput" type="search" autocomplete="off"><kbd>⌘ K</kbd></label>
+        <div class="topbar-actions">
+          <span class="live-pill" id="onlinePill" title="Счётчик активных пользователей в этом браузере"><i></i><b id="onlineCount">0</b><small id="onlineLabel"></small></span><select id="languageSelect" class="language-select" aria-label="Язык"><option value="ru">RU</option><option value="en">EN</option><option value="uz">UZ</option></select>
+          <button id="accountButton" class="account-button"><span class="avatar" id="accountAvatar">У</span><span class="account-name" id="accountName"></span><span class="account-chevron">⌄</span></button>
+        </div>
+      </header>
+      <main id="mainContent" tabindex="-1"></main>
+    </div>
+  </div>
+  <div id="modalRoot"></div>
+  <script src="content.js"></script>
+  <script src="curriculum.js"></script>
+  <script src="course-savings.js"></script>
+  <script src="course-investing.js"></script>
+  <script src="course-qrpayments.js"></script>
+  <script src="course-bigpurchase.js"></script>
+  <script src="curriculum-final.js"></script>
+  <script src="i18n.js"></script>
+  <script src="auth.js"></script>
+  <script src="presence.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

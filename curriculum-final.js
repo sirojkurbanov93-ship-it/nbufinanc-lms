@@ -1,0 +1,1 @@
+(()=>{const D=SITE_CONTENT;D.courses.forEach((c,ci)=>{c.quiz.forEach((q,qi)=>{const correct=q.correct,slot=(qi+ci)%3,order=[0,1,2].filter(i=>i!==correct);order.splice(slot,0,correct);q.a=order.map(i=>q.a[i]);q.correct=slot;for(const lang of ['en','uz']){const row=D.lessons[lang][c.id].quiz[qi];row[1]=order.map(i=>row[1][i])}})})})();
